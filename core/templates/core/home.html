@@ -1,0 +1,58 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>Bedford Studio | Coffee House in New York City</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'core/home.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'core/images/bedford-studio-logo.jpeg' %}">
+{% endblock %}
+{% block content %}
+<div class="page-container">
+	<div class="overlay">
+	    <div class="overlay-content">
+	        <h1 class="company-title">Bedford Studio Coffee</h1>
+	    </div>
+	</div>
+	<div class="main-content-container">
+		<h2 class="mission-statement">Sip, Connect, Curate.</h2>
+		<p class="paragraph">Bedford Studio partners with Parlor Coffee based in Brooklyn to curate, source, blend, and roast our delicious coffee selection and options across all espresso based drinks, brew coffee, cold brew and more.</p><br>
+
+		<p class="paragraph">Bedford Studio partners with SuperFood City, a provider of consistently vegan, all-natural, and organic healthy treats. These treats are thoughtfully paired to complement our beverage selection.</p>
+		<div class="main-content-sub-container">
+		
+		</div>
+		<div class="outer-image-container">
+			<div class="inner-container-top">
+				<img src="{% static 'core/images/bsch2.jpeg' %}" class="image2 image" />
+				<img src="{% static 'core/images/bsch3.jpeg' %}" class="image3 image" />
+				<img src="{% static 'core/images/bsch6.jpeg' %}" class="image6 image" />
+				<img src="{% static 'core/images/bsch7.webp' %}" class="image7 image" />
+				
+			</div>
+			<div class="inner-container-bottom">
+				<img src="{% static 'core/images/bsch1.jpeg' %}" class="image1 image" />
+				<img src="{% static 'core/images/bsch8.webp' %}" class="image8 image" />
+				<img src="{% static 'core/images/bsch4.jpeg' %}" class="image4 image" />
+				<img src="{% static 'core/images/bsch5.jpeg' %}" class="image5 image" />
+			</div>
+		</div>
+	</div>
+	<p class="paragraph wide"></p>
+</div>
+<script type="text/javascript">
+	window.addEventListener('scroll', function() {
+	    const container = document.querySelector('.main-content-container');
+	    const companyTitle = document.querySelector('.company-title');
+	    let scrollPosition = window.scrollY;
+
+	    // Limit the scroll position to 500px for movement
+	    if (scrollPosition > 500) {
+	        scrollPosition = 500;
+	    }
+
+	    // Adjust the movement based on scroll position
+	    container.style.transform = `translateY(-${scrollPosition * 0.3}px)`;
+	    companyTitle.style.transform = `translateY(-${scrollPosition * 0.3}px)`;
+	});
+</script>
+{% endblock %}

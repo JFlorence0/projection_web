@@ -1,0 +1,124 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>Bedford Studio | Memberships</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'core/membership.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'core/images/bedford-studio-logo.jpeg' %}">
+{% endblock %}
+{% block content %}
+<div class="page-container">
+    <div class="overlay">
+        <div class="overlay-content">
+            <h1 class="membership-title">MEMBERSHIP</h1>
+            <p class="paragraph">Join the Studio Collective Membership to immerse yourself into a beneficial community, where you'll have access to a beautiful workspace, earn product discounts, and participate in exclusive member programs and events.</p>
+        </div>
+    </div>
+    <div class="community-container">
+        <h3 class="community-title">Our Community</h3>
+        <div class="community-info-container">
+            <div class="item-container">
+                <img src="{% static 'core/images/members.webp' %}" class="community-icon">
+                <h4 class="community-item-title">185 Active Members</h4>
+            </div>
+            <div class="item-container">
+                <img src="{% static 'core/images/events-icon.png' %}" class="community-icon">
+                <h4 class="community-item-title">40 Member Events</h4>
+            </div>
+            <div class="item-container">
+                <img src="{% static 'core/images/passes.webp' %}" class="community-icon">
+                <h4 class="community-item-title">2000 Day Passes</h4>
+            </div>
+        </div>
+        
+    </div>
+    <div class="scrollable-list" id="scrollable-list">
+      <img src="{% static 'core/images/community-photo-1.jpeg' %}" class="scroll-images">
+      <img src="{% static 'core/images/community-photo-2.jpeg' %}" class="scroll-images">
+      <img src="{% static 'core/images/community-photo-3.jpeg' %}" class="scroll-images">
+      <img src="{% static 'core/images/community-photo-4.jpeg' %}" class="scroll-images">
+      <img src="{% static 'core/images/community-photo-5.jpeg' %}" class="scroll-images">
+      <img src="{% static 'core/images/community-photo-6.jpeg' %}" class="scroll-images">
+    </div>
+    <div class="subscribe-container">
+        <h3 class="community-title">Subscribe</h3>
+        <div class="subscription-container">
+            <div class="subscription-item">
+                <h4 class="subscription-title">Day Pass</h4>
+                <div class="horizontal-line"></div>
+                <a href="https://www.google.com/maps/dir//Bedford+Studio/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89c2591b2ccdec6b:0x44afb72569dec2fb?sa=X&ved=2ahUKEwjyid3isrqCAxXyjYkEHZywBWYQ9Rd6BAg5EAA" class="purchase-link">Purchase in Person</a>
+                <div class="subscription-detail-container">
+                    <ul class="detail-list">
+                        <li>$10 Day Pass</li>
+                        <li>Access to work from the studio</li>
+                        <li>Enhanced productivity & Creativity</li>
+                        <li>Purchase in person</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="subscription-item">
+                <h4 class="subscription-title">Monthly</h4>
+                <div class="horizontal-line"></div>
+                <a href="https://app.pintuna.com/membership/84dad9b1-08bf-41cf-9670-7dccae1ea89f/register" class="purchase-link">Subscribe</a>
+                <div class="subscription-detail-container">
+                    <ul class="detail-list">
+                        <li>$30 Monthly Membership</li>
+                        <li>10% Discounts on all Items</li>
+                        <li>Access to Work from the Studio</li>
+                        <li>Invites to Exclusive Member Events</li>
+                        <li>Flexibility to Pause or Cancel Anytime</li>
+                        <li>Digital Members Card in Apple Wallet</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subscription-item">
+                <h4 class="subscription-title">Annual</h4>
+                <div class="horizontal-line"></div>
+                <a href="https://app.pintuna.com/membership/d0f7bae2-d0b8-4136-b4b0-98e055e26bd2/register" class="purchase-link">Subscribe</a>
+                <div class="subscription-detail-container">
+                    <ul class="detail-list">
+                        <li>$300 Annual Membership</li>
+                        <li>10% Discounts on all Items</li>
+                        <li>Access to Work from the Studio</li>
+                        <li>Invites to Exclusive Member Events</li>
+                        <li>Flexibility to Pause or Cancel Anytime</li>
+                        <li>Digital Members Card in Apple Wallet</li>
+                        <li>Two Complimentary Months</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+	
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', (event) => {
+  const scrollContainer = document.getElementById('scrollable-list');
+  const images = Array.from(scrollContainer.children);
+
+  // Clone images to achieve the infinite scroll effect
+  images.forEach(image => {
+      const clone = image.cloneNode(true);
+      scrollContainer.appendChild(clone);
+  });
+
+  let scrollAmount = 1;
+
+  function scrollImages() {
+      scrollContainer.scrollLeft += scrollAmount;
+
+      // Reset scroll position to create a seamless loop
+      if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+          scrollContainer.scrollLeft = 0;
+      }
+  }
+
+  // Adjust the speed of the scroll here
+  const scrollInterval = setInterval(scrollImages, 20);
+});
+
+</script>
+{% endblock %}

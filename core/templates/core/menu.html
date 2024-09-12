@@ -1,0 +1,145 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+    <title>Bedford Studio | Coffee House in New York City</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'core/menu.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'core/images/bedford-studio-logo.jpeg' %}">
+{% endblock %}
+{% block content %}
+<div class="page-container">
+	<div class="overlay">
+	    <div class="overlay-content">
+	        <h1 class="menu-title">MENU</h1>
+	        <h2 class="secondary-title">Bedford Studio Coffee</h2>
+	        <h2 class="address">West Village, New York</h2>
+	        <a href="" class="menu-link">Order on Uber Eats</a>
+	        <a href="" class="menu-link">Our Menu in Pictures</a>
+	    </div>
+	</div>
+	<div class="main-content-container">
+		<div class="section-container">
+			<h3 class="category-title">Coffee</h3>
+			<div class="menu-item-container">
+				<div class="left-section">
+					<h5 class="menu-item-name">Espresso</h5>
+					<h5 class="menu-item-name">Cappuccino</h5>
+					<h5 class="menu-item-name">Cold Brew</h5>
+					<h5 class="menu-item-name">Latte</h5>
+					<h5 class="menu-item-name">Cortado</h5>
+				</div>
+
+				<div class="vertical-line"></div>
+
+				<div class="right-section">
+					<h5 class="menu-item-name">Brewed Coffee</h5>
+					<h5 class="menu-item-name">Chai Latte</h5>
+					<h5 class="menu-item-name">Flat White</h5>
+					<h5 class="menu-item-name">Macchiato</h5>
+					<h5 class="menu-item-name">Americano</h5>
+				</div>
+
+			</div>
+		</div>
+		<div class="section-container">
+			<img src="{% static 'core/images/bsch4.jpeg' %}" class="image" />
+		</div>
+
+		<div class="section-container">
+			<img src="{% static 'core/images/matcha.jpeg' %}" class="image" />
+		</div>
+		<div class="section-container">
+			<h3 class="category-title">Teas</h3>
+			<div class="menu-item-container">
+				<div class="left-section">
+					<h5 class="menu-item-name">Matcha</h5>
+					<h5 class="menu-item-name">Matcha Latte</h5>
+					<h5 class="menu-item-name">Ginger Twist</h5>
+					<h5 class="menu-item-name">Bold Breakfast</h5>
+					<h5 class="menu-item-name">Citron Calm</h5>
+				</div>
+
+				<div class="vertical-line"></div>
+				
+				<div class="right-section">
+					<h5 class="menu-item-name">Classic Green</h5>
+					<h5 class="menu-item-name">Signature Black</h5>
+					<h5 class="menu-item-name">Marrakesh Mint</h5>
+					<h5 class="menu-item-name">Earl Grey</h5>
+					<h5 class="menu-item-name">Jasmine Mist</h5>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="section-container">
+			<h3 class="category-title">Treats</h3>
+			<div class="menu-item-container">
+				<div class="left-section">
+					<h5 class="menu-item-name">MODs</h5>
+			        <h5 class="menu-item-name">Cookies</h5>
+			        <h5 class="menu-item-name">Muffins</h5>
+				</div>
+
+				<div class="vertical-line"></div>
+
+				<div class="right-section">
+					<h5 class="menu-item-name">Donuts</h5>
+			        <h5 class="menu-item-name">Brownies</h5>
+			        <h5 class="menu-item-name">Scones</h5>
+			        <h5 class="menu-item-name">Date Balls</h5>
+				</div>
+
+			</div>
+		</div>
+		<div class="section-container">
+			<img src="{% static 'core/images/treats.jpeg' %}" class="image" />
+		</div>
+
+		<div class="section-container">
+			<img src="{% static 'core/images/pumpkin-spice.jpeg' %}" class="image" />
+		</div>
+
+		<div class="section-container">
+			<h3 class="category-title">Seasonals</h3>
+			<div class="menu-item-container">
+				<div class="left-section">
+			        <h5 class="menu-item-name">Pumpkin Spiced Latte</h5>
+			        <h5 class="menu-item-name">Maple Cinnamon Cappuccino</h5>
+			    </div>
+
+			    <div class="vertical-line"></div>
+
+			    <div class="right-section">
+			        <h5 class="menu-item-name">Dulce De Leche Cold Brew</h5>
+			        <h5 class="menu-item-name">Matcha Chai Latte</h5>
+			    </div>
+
+			</div>
+		</div>
+
+		<div class="section-container">
+			<h3 class="category-title">Matcha</h3>
+			<div class="menu-item-container">
+				<div class="left-section">
+			        <h5 class="menu-item-name">Mango Matcha</h5>
+			        <h5 class="menu-item-name">Strawberry Matcha</h5>
+			    </div>
+
+			    <div class="vertical-line"></div> <!-- Vertical line container -->
+
+			    <div class="right-section">
+			        <h5 class="menu-item-name">Yuzu Matcha</h5>
+			        <h5 class="menu-item-name">Peach Matcha</h5>
+			    </div>
+
+			</div>
+		</div>
+		<div class="section-container">
+			<img src="{% static 'core/images/lavendar-matcha.jpeg' %}" class="image" />
+		</div>
+		
+	</div>
+	<p class="paragraph wide"></p>
+</div>
+{% endblock %}

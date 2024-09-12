@@ -1,0 +1,130 @@
+.overlay {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    background-image: url("images/bedford-studio-cover.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.overlay-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-title {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.secondary-title {
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+.address {
+    font-weight: 100;
+    font-size: 1.2rem;
+    color: lightgrey;
+    margin-top: .25rem;
+}
+
+.menu-link {
+    text-decoration: none;
+    background-color: white;
+    padding: 1rem 2.5rem;
+    width: 15rem;
+    margin-top: 1.2rem;
+    border-radius: 20px;
+    color: black;
+}
+
+.main-content-container {
+    position: relative;
+    background-image: linear-gradient(#c8c2b5, #c8c2b5);
+    border-top-width: 100%;
+    z-index: 2; /* Ensure it appears above the overlay */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-bottom: 3rem;
+}
+
+.section-container {
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.category-title {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    letter-spacing: .3rem;
+}
+
+.menu-item-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.left-section, .right-section {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    justify-content: space-around;
+}
+
+.vertical-line {
+    width: 1px; /* Width of the line */
+    height: 70%; /* Height of the line as 80% of the container */
+    background-color: var(--cream); /* Line color */
+    margin: 1.5rem 0;
+}
+
+.menu-item-name {
+    font-weight: 400;
+}
+
+.paragraph {
+    font-size: 1.2rem;
+    color: var(--black);
+    font-weight: 200;
+    width: 55%;
+    line-height: 2.8rem;
+    text-align: center;
+}

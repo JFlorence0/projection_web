@@ -1,0 +1,137 @@
+body {
+	background-color: #202421;
+}
+
+.overlay {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    background-image: url("images/bedford-studio-interior-cover.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.overlay-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.winnas-title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--cream);
+    margin-top: 2rem;
+}
+
+.main-content-container {
+    position: relative;
+    background-image: linear-gradient(#c8c2b5, #c8c2b5);
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border-top-width: 100%;
+    margin-top: -60px; /* Slightly overlaps the overlay */
+    z-index: 2; /* Ensure it appears above the overlay */
+    padding-top: 2rem; /* Adjust padding for content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-title {
+	font-size: 2rem;
+}
+
+.mission-statement {
+	font-size: 3rem;
+	color: var(--black);
+	font-weight: 400;
+	margin-bottom: 2rem;
+}
+
+.paragraph {
+	font-size: 1.2rem;
+	color: var(--black);
+	font-weight: 200;
+	width: 55%;
+	line-height: 2.8rem;
+	text-align: center;
+}
+
+.outer-image-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 3rem;
+	background: linear-gradient(to bottom, transparent 0%, #202421 80vh, #202421 100%);
+}
+
+.inner-container-top, .inner-container-bottom {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+	padding: 0 2rem;
+}
+
+.image1 {
+	width: 233px;
+	height: 350px;
+}
+
+.image2 {
+	width: 525px;
+	height: 350px;
+}
+
+.image3 {
+	width: 280px;
+	height: 350px;
+}
+
+.image4 {
+	width: 280px;
+	height: 350px;
+}
+
+.image5 {
+	width: 263px;
+	height: 350px;
+}
+
+.image6 {
+	width: 197px;
+	height: 350px;
+}
+
+.image7 {
+	width: 263px;
+	height: 350px;
+}
+
+.image8 {
+	width: 263px;
+	height: 350px;
+}
+
+.wide {
+	margin-top: 2rem;
+	width: 80%;
+}

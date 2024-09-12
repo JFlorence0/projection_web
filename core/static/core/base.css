@@ -1,0 +1,97 @@
+:root {
+	--main-font: helvetica;
+	--green: #242e2d;;
+	--cream: #f1ede5;
+	--black: #0e0e0e;
+}
+
+* {
+	margin:0;
+	padding: 0;
+	font-size: 16px;
+	box-sizing: border-box;
+	font-family: var(--main-font);
+	font-size: 16px;
+}
+
+.navbar {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	top: 0;
+	width: 100vw;
+	padding: 10px 0 10px 20px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background-color: transparent; /* Start with a transparent background */
+	transition: background-color 0.6s ease; /* Smooth transition */
+	z-index: 1000; /* Ensure navbar stays on top */
+}
+
+.navbar.scrolled {
+	background-color: var(--cream); /* White background when scrolled */
+}
+
+.navbar-list-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.navbar-list {
+	width: 30%;
+	display: flex;
+	justify-content: space-between;
+	margin-left: -85px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: var(--cream); /* Default link color */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navbar.scrolled .navbar-link {
+    color: var(--black); /* Link color when scrolled */
+}
+
+.bedford-studio-logo {
+	width: 75px;
+	height: 75px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 8rem;
+  background-color: black;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-top {
+	display: flex;
+	width: 10%;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 0.5rem;
+}
+
+.footer-list {
+	width: 25%;
+	display: flex;
+	justify-content: space-around;
+	padding-left: 1.5rem;
+}
+
+.sm-icon {
+	width: 25px;
+	height: 25px;
+}
+
+.just-cr8if {
+	font-size: 0.75rem;
+	color: var(--cream);
+	font-weight: 550;
+	text-decoration: none;
+}
